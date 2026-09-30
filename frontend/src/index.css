@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-feature-settings: "tnum" 1;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2E3944 #10151A;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #10151A;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2E3944;
+  border-radius: 2px;
+}
+
+/* Visible keyboard focus everywhere — never rely on color alone */
+:focus-visible {
+  outline: 2px solid #35B8D9;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
